@@ -9,7 +9,8 @@ services:
       dockerfile: Dockerfile
     # restart: always
     volumes:
-      - ./src:/app
+      - ./app:/app
+      - ./.aws:/root/.aws
     env_file:
-      - twitter_api.env
+      - ./app/twitter_api.env
     tty: true

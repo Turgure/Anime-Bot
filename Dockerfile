@@ -1,3 +1,5 @@
+FROM hashicorp/terraform:latest as terraform
+
 FROM python:3.9.13-slim
 USER root
 
@@ -13,5 +15,7 @@ RUN apt-get install -y vim less && \
     pip install --upgrade pip && \
     pip install --upgrade setuptools && \
     pip install svn requests tweepy
+
+COPY --from=terraform /bin/terraform /bin/terraform
 
 WORKDIR /app
