@@ -1,5 +1,10 @@
 .aws
+
 .terraform/
+*.tfplan
+*.tfstate
+*.tfstate.backup
+
 archive/
 
 app/src/config.json
