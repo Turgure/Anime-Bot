@@ -1,0 +1,15 @@
+﻿version: '3.7'
+
+services:
+  anime-bot:
+    container_name: anime-bot
+    image: anime-bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # restart: always
+    volumes:
+      - ./src:/app
+    env_file:
+      - twitter_api.env
+    tty: true
