@@ -1,4 +1,5 @@
 .aws
-*.env
 .terraform/
 archive/
+
+app/src/config.json
