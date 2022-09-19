@@ -6,5 +6,6 @@
 *.tfstate.backup
 
 archive/
+__pycache__/
 
 app/src/config.json
