@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/root/.cache/pypoetry/virtualenvs/anime-bot-9TtSrW0h-py3.9/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
