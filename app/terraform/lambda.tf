@@ -10,8 +10,6 @@ resource "aws_lambda_function" "function" {
   runtime       = local.lambda_runtime
   role          = aws_iam_role.lambda_role.arn
 
-  kms_key_arn = aws_kms_key.lambda_key.arn
-
   filename         = data.archive_file.function_source.output_path
   source_code_hash = data.archive_file.function_source.output_base64sha256
 

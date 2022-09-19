@@ -15,7 +15,7 @@ locals {
   ### lambda
   # ソースファイルの場所
   lambda_source_dir    = "../src"
-  # 名関数
+  # 関数名
   lambda_function_name = "twitter_anime_bot"
   # エントリポイント
   lambda_handler       = "lambda_function.lambda_handler"
@@ -25,10 +25,4 @@ locals {
   lambda_iam_policy    = "anime_bot_iam_policy"
   # IAMロール名
   lambda_iam_role      = "anime_bot_iam_role"
-
-  ### KMS
-  # キー名
-  kms_name        = "alias/anime_bot_lambda_key"
-  # キー説明
-  kms_description = "My Lambda Function Customer Master Key"
 }
