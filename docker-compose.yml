@@ -11,6 +11,4 @@ services:
     volumes:
       - ./app:/app
       - ./.aws:/root/.aws
-    env_file:
-      - ./app/twitter_api.env
     tty: true
