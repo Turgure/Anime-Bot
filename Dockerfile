@@ -13,8 +13,7 @@ ENV TZ JST-9
 ENV TERM xterm
 RUN apt-get install -y vim less && \
     pip install --upgrade pip && \
-    pip install --upgrade setuptools && \
-    pip install svn requests
+    pip install --upgrade setuptools
 
 # install aws
 RUN apt-get install -y curl unzip groff-base && \

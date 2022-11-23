@@ -16,3 +16,8 @@ bash exec_apply.sh
 ```sh
 aws lambda invoke --function-name twitter_anime_bot /dev/null
 ```
+
+## pythonライブラリ(pip)をlambdaに入れる方法
+```sh
+pip install <library> -t <directory>
+```
