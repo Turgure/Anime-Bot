@@ -1,5 +1,7 @@
 FROM hashicorp/terraform:latest as terraform
 
+FROM amazon/aws-cli as awscli
+
 FROM python:3.9.13-slim
 USER root
 
@@ -15,14 +17,11 @@ RUN apt-get install -y vim less && \
     pip install --upgrade pip && \
     pip install --upgrade setuptools
 
-# install aws
-RUN apt-get install -y curl unzip groff-base && \
-    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
-    unzip awscliv2.zip && \
-    ./aws/install && \
-    rm awscliv2.zip
-
 # install terraform
 COPY --from=terraform /bin/terraform /bin/terraform
+
+# install aws
+COPY --from=awscli /usr/local/aws-cli /usr/local/aws-cli
+COPY --from=awscli /usr/local/bin /usr/local/bin
 
 WORKDIR /app
