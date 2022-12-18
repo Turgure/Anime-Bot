@@ -4,7 +4,9 @@ import re
 import sys
 
 from model.anime_data import AnimeData
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'lib'))
+from model.post_type import PostType
+
+sys.path.append('lib')
 import requests
 from bs4 import BeautifulSoup
 
