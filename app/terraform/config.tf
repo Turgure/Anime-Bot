@@ -25,4 +25,7 @@ locals {
   lambda_iam_policy    = "anime_bot_iam_policy"
   # IAMロール名
   lambda_iam_role      = "anime_bot_iam_role"
+
+  ### dynamodb
+  dynamodb_table_name = "AnimePostData"
 }
