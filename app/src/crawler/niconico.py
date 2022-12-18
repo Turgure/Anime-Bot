@@ -54,6 +54,6 @@ class Niconico:
                 print("\"", pictureUrl, "\"", sep='')
                 print("---")
 
-                animeDatas.append(AnimeData(contentId, title, datetime.strptime(startTime, '%Y-%m-%dT%H:%M'), watchUrl, pictureUrl))
+                animeDatas.append(AnimeData(PostType.Niconico, contentId, title, startTime, watchUrl, pictureUrl))
 
         return animeDatas
