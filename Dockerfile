@@ -2,7 +2,7 @@ FROM hashicorp/terraform:latest as terraform
 
 FROM amazon/aws-cli as awscli
 
-FROM python:3.9.13-slim
+FROM python:slim
 USER root
 
 RUN apt-get update
